@@ -2,44 +2,32 @@
 
 /* global Given, When, Then */
 
-  Given(/^quando fazer a chamar de get da api$/, () => {
-    cy.api_test_get()
-    .then(response => {
-      expect(response.status).to.equal(200)
-    })
-  });
-
-  Given(/^quando fazer a chamar de post da api$/, () => {
-    cy.api_test_post()
-    .then(response => {
-      expect(response.status).to.equal(200)
-      expect(response.body).to.contain({"success": "true"})
-    })
-  });
-
-  Given(/^quando tenho uma url válida para teste$/, () => {
+Then(/^tenho o retorno "([^"]*)"$/, (retorno) => {
     return true;
-  });
+});
+  
+Given(/^quando realizo uma chamada do tipo "([^"]*)"$/, (method_api) => {
+  cy.api_get_faker_azure(method_api)
+  .then(response => {
+    expect(response.status).to.equal(200)
+  })
+});
 
-  When(/^quando realizo uma chamada do tipo$/, () => {
-      cy.api_get_reqres()
-      .then(response => {
-        expect(response.status).to.equal(200)
-      })
-  });
+Given(/^quando realizo uma chamada do tipo "([^"]*)" com payload válido$/, (method_api) => {
+	const payload_post = require('../payload/post.json')
 
-  Then(/^tenho o retorno "([^"]*)"$/, (args1) => {
-    return true;
-  });
+  cy.api_post_faker_azure(method_api, payload_post)
+  .should(response => {
+    expect(response.status).to.equal(200)
+  })
+});
 
+Given(/^quando realizo uma chamada do tipo "([^"]*)" e o id do payload$/, (method_api) => {
+	const payload_post = require('../payload/post.json')
 
-  Given(/^quando tenho uma payload válido teste$/, () => {
-    return true;
-  });
+  cy.api_get_id_faker_azure(method_api, payload_post)
+  .should(response => {
+    expect(response.status).to.equal(200)
+  })
+});
 
-  When(/^quando realizo uma chamada do tipo post$/, () => {
-      cy.api_post_reqres()
-      .then(response => {
-        expect(response.status).to.equal(201)
-      })
-  });
