@@ -1,0 +1,144 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-06-11T21:13:29.517Z",
+    "end": "2021-06-11T21:13:34.623Z",
+    "duration": 5106,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "00b78c86-4a4f-40d0-ad15-34b422f6bec6",
+      "title": "",
+      "fullFile": "cypress/integration/gherkins/teste.feature",
+      "file": "cypress/integration/gherkins/teste.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d1cc7644-dc44-4388-baf9-1e6aef454d09",
+          "title": "Validar api fakerestapi online",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "teste apifakerestapi GET",
+              "fullTitle": "Validar api fakerestapi online teste apifakerestapi GET",
+              "timedOut": null,
+              "duration": 4564,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "445469d7-56fd-4dff-8fa0-79f9b5cf86d1",
+              "parentUUID": "d1cc7644-dc44-4388-baf9-1e6aef454d09",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "teste apifakerestapi POST",
+              "fullTitle": "Validar api fakerestapi online teste apifakerestapi POST",
+              "timedOut": null,
+              "duration": 256,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "85f0d455-d1e5-48d6-8f97-62230ae7f047",
+              "parentUUID": "d1cc7644-dc44-4388-baf9-1e6aef454d09",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "teste apifakerestapi GET por id",
+              "fullTitle": "Validar api fakerestapi online teste apifakerestapi GET por id",
+              "timedOut": null,
+              "duration": 238,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "edf3619a-f59a-43b7-8bae-eba4c164be97",
+              "parentUUID": "d1cc7644-dc44-4388-baf9-1e6aef454d09",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "445469d7-56fd-4dff-8fa0-79f9b5cf86d1",
+            "85f0d455-d1e5-48d6-8f97-62230ae7f047",
+            "edf3619a-f59a-43b7-8bae-eba4c164be97"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5058,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
