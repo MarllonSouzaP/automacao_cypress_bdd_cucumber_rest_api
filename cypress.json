@@ -1,0 +1,16 @@
+{
+  "baseUrl": "http://localhost/",
+  "env": {
+    "TAGS": "not @wip"},
+  "TAGS": "not @wip",
+  "ignoreTestFiles": ["*.js", "*.md"],
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "charts": true, 
+    "reportDir": "cypress/reports",
+    "overwrite": false,
+    "html": true,
+    "json": true
+  }
+}
+
